@@ -79,7 +79,7 @@ fn cargo_run_command(command: CargoCommand, args: Vec<String>) -> Result<Option<
     }
 
     let current_dir = std::env::current_dir()?;
-    let xargo_dir = current_dir.join("..").join("rust-std-skyline-squashed").join("src");
+    let xargo_dir = current_dir.join("..").join("rust-std-skyline").join("library");
 
     let mut command =
         Command::new("xargo")
@@ -201,7 +201,7 @@ pub fn doc(args: Vec<String>) -> Result<()> {
     }
 
     let current_dir = std::env::current_dir()?;
-    let xargo_dir = current_dir.join("..").join("rust-std-skyline-squashed").join("src");
+    let xargo_dir = current_dir.join("..").join("rust-std-skyline").join("library");
 
     let mut command =
         Command::new("xargo")
